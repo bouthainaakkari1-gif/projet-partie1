@@ -24,17 +24,21 @@ while True:
             for i, tache in enumerate(taches, start=1):
                 print(i, "-", tache)
 
-    elif choix == "3":
+       elif choix == "3":
         recherche = input("Nom de la tâche à rechercher : ")
         trouvee = False
+        nombre = 0
 
         for tache in taches:
             if recherche.lower() in tache.lower():
                 print("Tâche trouvée :", tache)
                 trouvee = True
+                nombre += 1
 
         if trouvee == False:
             print("Tâche introuvable.")
+        else:
+            print("Nombre de tâches trouvées :", nombre)
 
     elif choix == "4":
         print("Au revoir !")
